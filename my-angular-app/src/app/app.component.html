@@ -1,19 +1,14 @@
 <div style="text-align:center">
   <h1>
-    From App Component
+    {{message}}
   </h1>
   <!-- <app-test></app-test> -->
   <!-- <app-binding></app-binding> -->
   <!-- <app-style-binding></app-style-binding> -->
   <!-- <app-event-binding></app-event-binding> -->
   <!-- <app-template-reference></app-template-reference> -->
-  <app-twoway-binding></app-twoway-binding>
+  <!-- <app-twoway-binding></app-twoway-binding> -->
+  <!-- <app-ng-switch></app-ng-switch> -->
+  <!-- <app-ng-for></app-ng-for> -->
+  <app-component-interaction (childEvent)="message=($event)" [parentData]="name"></app-component-interaction>
 </div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
