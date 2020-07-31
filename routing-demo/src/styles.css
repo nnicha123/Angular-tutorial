@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: sans-serif;
+}
+nav a.active {
+  background-color: #5c7e8f;
+  color: white;
+}
+nav a {
+  text-decoration: none;
+  color: rgb(55, 55, 75);
+  font-weight: bold;
+  background-color: rgb(212, 206, 206);
+  padding: 10px;
+
+  border-radius: 5px;
+}
+
+.deptWrap {
+  list-style: none;
+}
+.departmentID {
+  background-color: rgb(70, 117, 131);
+  padding: 10px;
+  color: white;
+  margin-right: 10px;
+}
+.deptList {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  padding-left: 0;
+}
