@@ -14,6 +14,10 @@ import { NgForComponent } from './ng-for/ng-for.component';
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
 import { PipesComponent } from './pipes/pipes.component';
 
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeService } from './employee.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,9 +31,11 @@ import { PipesComponent } from './pipes/pipes.component';
     NgForComponent,
     ComponentInteractionComponent,
     PipesComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponent,
   ],
-  imports: [BrowserModule, FormsModule],
-  providers: [],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
+  providers: [EmployeeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
