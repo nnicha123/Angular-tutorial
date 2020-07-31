@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-angular-app';
   public name = 'Nicha';
-  public message = "Haven't emitted event yet";
+  public message = 'From App component';
 }
