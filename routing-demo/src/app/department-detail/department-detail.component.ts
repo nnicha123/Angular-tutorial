@@ -5,8 +5,16 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
   selector: 'app-department-detail',
   template: `
     <h3>You selected department with id = {{ departmentId }}</h3>
-    <a class="Navigate" (click)="goPrevious()">Previous</a>
-    <a class="Navigate" (click)="goNext()">Next</a>
+    <p>
+      <button (click)="showOverview()">Overview</button>
+      <button (click)="showContact()">Contact</button>
+    </p>
+    <router-outlet></router-outlet>
+
+    <p>
+      <button class="Navigate" (click)="goPrevious()">Previous</button>
+      <button class="Navigate" (click)="goNext()">Next</button>
+    </p>
 
     <div>
       <button class="goBack" (click)="gotoDepartments()">Back</button>
@@ -36,7 +44,17 @@ export class DepartmentDetailComponent implements OnInit {
   }
   gotoDepartments(): void {
     let selectedId = this.departmentId ? this.departmentId : null;
-    // optional parameter {id:1} because its value doesn't effect the path, it is just there so we can use it to highlight previously clicked one
-    this.router.navigate(['/departments', { id: selectedId }]);
+    // optional route parameter {id:1} because its value doesn't effect the path, it is just there so we can use it to highlight previously clicked one
+    // this.router.navigate(['/departments', { id: selectedId }]);
+    //Using relative part (../ means go back one, departments/1 to departments/)
+    this.router.navigate(['../', { id: selectedId }], {
+      relativeTo: this.route,
+    });
+  }
+  showOverview(): void {
+    this.router.navigate(['overview'], { relativeTo: this.route });
+  }
+  showContact(): void {
+    this.router.navigate(['contact'], { relativeTo: this.route });
   }
 }

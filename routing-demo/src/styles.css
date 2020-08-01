@@ -42,17 +42,18 @@ li:hover {
   cursor: pointer;
 }
 
-.Navigate {
-  margin-right: 10px;
+button {
+  margin-right: 5px;
   text-decoration: none;
   color: rgb(55, 55, 75);
   font-weight: bold;
   background-color: rgb(212, 206, 206);
   padding: 10px;
   border-radius: 5px;
+  border: none;
 }
 
-.Navigate:hover {
+button:hover {
   background-color: rgb(70, 117, 131);
   color: white;
   cursor: pointer;

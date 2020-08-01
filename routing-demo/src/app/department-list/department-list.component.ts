@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-department-list',
   template: `
-    <h3>Department List</h3>
+    <h3 style="color:'#5c7e8f'">Department List</h3>
     <ul *ngFor="let department of departments" class="deptWrap">
       <li
         (click)="onSelect(department)"
@@ -35,7 +35,8 @@ export class DepartmentListComponent implements OnInit {
     });
   }
   onSelect(department): void {
-    this.router.navigate(['/departments', department.id]);
+    // this.router.navigate(['/departments', department.id]);
+    this.router.navigate([department.id], { relativeTo: this.route });
   }
   isSelected(department) {
     return department.id === this.selectedId;
